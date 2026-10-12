@@ -1,0 +1,11 @@
+file;line_number;rule;severity;field;message;key
+custos.csv;69;DUPLICATE_KEY;ERROR;lancamento_id;Chave duplicada: L0000068;L0000068|T000033
+custos.csv;18296;DUPLICATE_KEY;ERROR;lancamento_id;Chave duplicada: L0000068;L0000068|T000033
+pedidos.csv;57;DUPLICATE_KEY;ERROR;pedido_id+versao;Chave duplicada: P0000056|1;P0000056|1
+pedidos.csv;44013;DUPLICATE_KEY;ERROR;pedido_id+versao;Chave duplicada: P0000056|1;P0000056|1
+pedidos.csv;103;NEGATIVE_PHYSICAL_VALUE;ERROR;peso_kg;Valor fisico negativo: -450;P0000102|1
+pedidos.csv;207;REQUIRED_VALUE;ERROR;volume_m3;Campo obrigatorio vazio;P0000206|1
+pedidos.csv;414;INVALID_DATE;ERROR;data_coleta;Data invalida: 2025-02-30;P0000413|1
+pedidos.csv;513;INVALID_DOMAIN;ERROR;status;Valor fora do dominio:  confirmado ;P0000512|1
+pedidos.csv;310;FOREIGN_KEY;ERROR;rota_id;Referencia inexistente em rotas.csv: R99;P0000309|1
+custos.csv;903;FOREIGN_KEY;ERROR;viagem_id;Referencia inexistente em viagens.csv: T999999;L0000902|T999999

@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-10-12T16:13:52.500Z",
+  "cutoff": "2026-09-27T23:59:59-03:00",
+  "selected_orders": 44005,
+  "excluded_orders": 5,
+  "historical_demand_rows": 6528,
+  "backlog_rows": 56,
+  "valid_cost_rows": 18292,
+  "cost_trips": 8517,
+  "eligible_manual_forecasts": 36,
+  "exclusions": {
+    "pedido_chave_duplicada": 2,
+    "valor_fisico_negativo": 1,
+    "campo_obrigatorio": 1,
+    "rota_inexistente_ou_alias_nao_aprovado": 1,
+    "data_coleta_invalida": 1,
+    "status_fora_do_dominio": 1,
+    "custo_lancamento_duplicado": 2,
+    "custo_viagem_inexistente": 1
+  },
+  "raw_files_modified": false,
+  "curated_outputs": [
+    "pedidos_elegiveis.csv",
+    "demanda_historica_diaria.csv",
+    "carteira_confirmada_diaria.csv",
+    "custos_por_viagem.csv",
+    "previsao_manual_elegivel.csv"
+  ]
+}

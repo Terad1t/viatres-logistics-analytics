@@ -1,0 +1,17 @@
+{
+  "simulation_time": "2026-09-28T08:00:00-03:00",
+  "batch": "pedidos_lote_2026-09-28.csv",
+  "batch_rows": 2,
+  "before_entities": 44011,
+  "after_entities": 44012,
+  "changed_entities": [
+    "P0043909"
+  ],
+  "new_entities": [
+    "P9000001"
+  ],
+  "reapply_is_idempotent": true,
+  "forecast_hash_preserved": true,
+  "forecast_hash": "6ec47e1e86c432a305e0d9b4def23862280fb05d19be2a21d858c15113fd086c",
+  "applied_at": "2026-10-12T17:05:14.595116+00:00"
+}

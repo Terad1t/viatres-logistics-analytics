@@ -1,0 +1,11 @@
+{
+  "cutoff": "2026-09-27T23:59:59-03:00",
+  "kpis": 22,
+  "capacity_rows": 42,
+  "service_denominator": 42219,
+  "service_missing": 0,
+  "outputs": [
+    "kpis.csv",
+    "capacidade_prevista_diaria.csv"
+  ]
+}

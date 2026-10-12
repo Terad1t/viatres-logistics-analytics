@@ -1,0 +1,14 @@
+{
+  "cutoff": "2026-09-27T23:59:59-03:00",
+  "horizon": [
+    "2026-09-28",
+    "2026-10-04"
+  ],
+  "recommendations": 5,
+  "critical_capacity_rows": 2,
+  "saturation_capacity_rows": 1,
+  "stress_emergency_rows": 0,
+  "loss_emergency_rows": 0,
+  "economic_savings_proven": false,
+  "m3_and_palettes_in_scenarios": false
+}

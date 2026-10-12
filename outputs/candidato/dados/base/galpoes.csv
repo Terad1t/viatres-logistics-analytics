@@ -1,0 +1,7 @@
+﻿galpao_id;uf;cidade;capacidade_expedicao_kg_dia;capacidade_expedicao_m3_dia;docas
+G01;SP;Campinas;42000;225;6
+G02;SP;Guarulhos;38000;210;5
+G03;MG;Contagem;32000;180;5
+G04;MG;Uberlandia;28000;165;4
+G05;RJ;Duque de Caxias;32000;185;5
+G06;RJ;Volta Redonda;25000;145;4

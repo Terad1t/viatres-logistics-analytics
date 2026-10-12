@@ -1,0 +1,13 @@
+﻿rota_id;galpao_origem_id;uf_destino;cidade_destino;km_ciclo;horas_ciclo;sla_dias;cap_kg;cap_m3;cap_paletes
+R01;G01;SP;Ribeirao Preto;460;11.4;2;8000;45;14
+R02;G01;MG;Pouso Alegre;400;10.3;2;8000;45;14
+R03;G02;RJ;Resende;560;13.2;2;8000;45;14
+R04;G02;SP;Sao Jose dos Campos;190;6.5;1;8000;45;14
+R05;G03;MG;Juiz de Fora;540;12.8;2;8000;45;14
+R06;G03;MG;Divinopolis;250;7.5;1;8000;45;14
+R07;G04;SP;Franca;560;13.2;2;8000;45;14
+R08;G04;MG;Uberaba;220;7.0;1;8000;45;14
+R09;G05;RJ;Campos dos Goytacazes;520;12.5;2;8000;45;14
+R10;G05;RJ;Niteroi;110;5.0;1;8000;45;14
+R11;G06;SP;Taubate;390;10.1;2;8000;45;14
+R12;G06;RJ;Nova Iguacu;220;7.0;1;8000;45;14

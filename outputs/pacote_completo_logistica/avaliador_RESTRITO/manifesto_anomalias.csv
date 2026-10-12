@@ -1,0 +1,18 @@
+﻿ocorrencia_id;arquivo;linha_csv;chave;campo;valor_original;valor_injetado;regra;tratamento_esperado
+Q001;pedidos.csv;103;P0000102;peso_kg;347.8;-450;Peso estritamente positivo;"Quarentena da metrica; nao usar abs nem adivinhar o original"
+Q002;pedidos.csv;207;P0000206;volume_m3;2.82;;Volume obrigatorio;"Sinalizar ausencia; nao substituir por zero"
+Q003;pedidos.csv;310;P0000309;rota_id;R02;R99;FK inexistente;"Quarentena; preservar pedido bruto"
+Q004;pedidos.csv;414;P0000413;data_coleta;2025-01-07;2025-02-30;Data invalida;Quarentena de data
+Q005;pedidos.csv;513;P0000512;status;CONFIRMADO; confirmado ;Dominio normalizavel;Trim e uppercase com rastreio
+Q006;entregas.csv;703;D0000702;data_entrega;2025-01-12;2024-12-01;Entrega anterior a coleta;Quarentena do prazo
+Q007;custos.csv;807;L0000806;valor_brl;37.4;-75;Sem estorno neste contrato;"Quarentena; pedir comprovante"
+Q008;custos.csv;903;L0000902;viagem_id;T000426;T999999;FK inexistente;Quarentena de custo
+Q009;disponibilidade.csv;1022;2025-01-22;horas_disponiveis;16;28;Horas fora de 0 a 24;Quarentena da capacidade
+Q010;previsao_manual.csv;26;M025;rota_digitada;R01;r 01;Alias cadastrado;Resolver por aliases_rotas
+Q011;previsao_manual.csv;30;M029;rota_digitada;R05;R-05;Alias cadastrado;Resolver por aliases_rotas
+Q012;previsao_manual.csv;27;M026;demanda_digitada;40247.8;40.2478;Unidade explicita t;Converter toneladas em kg
+Q013;previsao_manual.csv;27;M026;unidade;kg;t;Unidade explicita t;"Multiplicar por 1000; tolerancia 0.1 kg"
+Q014;pedidos.csv;44013;P0000056;LINHA;1 linha;duplicata exata;PK duplicada exata;Deduplicar sem dobrar totais
+Q015;custos.csv;18296;L0000068;LINHA;1 linha;duplicata exata;PK duplicada exata;Deduplicar sem dobrar totais
+Q016;previsao_manual.csv;38;M037;versao;v1 permanece;v2 legitima;Ultima versao conhecida por semana e rota normalizada;"Selecionar v2; nao tratar como duplicata exata"
+Q017;disponibilidade.csv;;2026-09-29|V040;LINHA;"{""data"": ""2026-09-29"", ""veiculo_id"": ""V040"", ""status"": ""DISPONIVEL"", ""horas_disponiveis"": 16, ""natureza"": ""PLANEJADO"", ""registrado_em"": ""2026-09-27T06:00:00-03:00""}";ausente;Completude data x frota;"Capacidade desconhecida; cobertura explicita"

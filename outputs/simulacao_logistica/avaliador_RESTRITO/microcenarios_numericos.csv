@@ -1,0 +1,10 @@
+﻿caso;entrada;esperado;tolerancia
+C01_JOIN;"Viagem A: 1000 frete + 100 pedagio; 2 pedidos 600kg e 400kg";"Total 1100 BRL, 1000 kg, 1.10 BRL/kg; nao 2200 BRL";0.01 BRL
+C02_OTIF;"4 pedidos expedidos: A integral no prazo; B parcial no prazo; C integral atrasado; D vencido em transito";"Pontualidade 2/4=50%; OTIF 1/4=25%";0.1 pp
+C03_CAPACIDADE;"Carga 7000kg, 50m3, 10 paletes; caminhao 8000kg,45m3,14 paletes";"Inviavel em 1 viagem; minimo teorico 2 pelo volume";exato
+C04_PREVISAO;"Real [100,200]; previsto [120,180]";"WAPE 40/300=13.3333%; vies 0%; MAE 20";0.1 pp
+C05_CARTEIRA;Previsao TOTAL 1000kg, carteira incluida 400kg;"Total 1000kg, componente ainda nao confirmado 600kg; nao 1400kg";0.1 kg
+C06_CUSTO;"Emergencial 2000 base+760 adicional+100 pedagio; proprio 900 variavel+100 pedagio; fixo existente 420";"Economia incremental potencial 1860 BRL; fixo nao evitavel nao se soma a economia";0.01 BRL
+C07_OBRA;"G01 nominal 42000kg/225m3; efetiva em 29/09 12600kg/67.5m3; demanda 15000kg/60m3";"Deficit 2400kg, sem deficit volume; nao descontar obra duas vezes";0.1 kg
+C08_REPLAY;"A v1 500kg confirmado; lote A v2 cancelado + B v1 200kg confirmado; reaplicar";"2 entidades, demanda liquida 200kg; reaplicacao nao altera";exato
+C09_ZERO;"Real [0,0]; previsto [10,0]";"WAPE indisponivel; MAE 5; nao WAPE 0%";exato

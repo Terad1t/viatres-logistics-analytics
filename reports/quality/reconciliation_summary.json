@@ -1,0 +1,14 @@
+{
+  "historical_orders": 42240,
+  "orders_with_reconciliation_issue": 0,
+  "requested_kg": 39104298.6,
+  "embarked_kg": 39104298.6,
+  "difference_kg": 0.0,
+  "cost_trip_count": 8517,
+  "trip_count": 8517,
+  "trips_without_aggregated_cost": 0,
+  "duplicate_cost_ids_raw": 1,
+  "cost_component_reconciled": true,
+  "tolerance_kg": 0.1,
+  "tolerance_brl": 0.05
+}

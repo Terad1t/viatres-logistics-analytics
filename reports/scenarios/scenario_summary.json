@@ -1,0 +1,18 @@
+{
+  "horizon": [
+    "2026-09-28",
+    "2026-10-04"
+  ],
+  "scenarios": [
+    "BASE",
+    "DEMANDA_MAIS_20_PCT",
+    "PERDA_VEICULO_DISPONIVEL_2026-09-29"
+  ],
+  "rows": 252,
+  "vehicle_loss_date": "2026-09-29",
+  "m3_and_palettes_modeled": false,
+  "emergency_capacity_guaranteed": false,
+  "outputs": [
+    "scenarios.csv"
+  ]
+}

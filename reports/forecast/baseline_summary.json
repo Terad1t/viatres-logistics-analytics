@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-10-12T17:04:41.646456+00:00",
+  "method": "MEDIA_4_SEMANAS_MESMO_DIA_SEMANA",
+  "data_cutoff": "2026-09-27T23:59:59-03:00",
+  "horizon": [
+    "2026-09-28",
+    "2026-10-04"
+  ],
+  "routes": 12,
+  "forecast_rows": 84,
+  "backtest_windows": 4,
+  "backtest_totals": [
+    {
+      "window_train_end": "2026-08-30",
+      "test_start": "2026-08-31",
+      "test_end": "2026-09-06",
+      "rota_id": "TOTAL",
+      "data": "",
+      "real_kg": "511592.4",
+      "previsao_kg": "492706.9",
+      "erro_kg": "-18885.5",
+      "mae_kg": "1195.3",
+      "wape": "0.196259",
+      "bias": "-0.036915",
+      "observacoes": "84"
+    },
+    {
+      "window_train_end": "2026-09-06",
+      "test_start": "2026-09-07",
+      "test_end": "2026-09-13",
+      "rota_id": "TOTAL",
+      "data": "",
+      "real_kg": "495841.7",
+      "previsao_kg": "501298.4",
+      "erro_kg": "5456.7",
+      "mae_kg": "1137.2",
+      "wape": "0.192652",
+      "bias": "0.011005",
+      "observacoes": "84"
+    },
+    {
+      "window_train_end": "2026-09-13",
+      "test_start": "2026-09-14",
+      "test_end": "2026-09-20",
+      "rota_id": "TOTAL",
+      "data": "",
+      "real_kg": "534033.2",
+      "previsao_kg": "500689.7",
+      "erro_kg": "-33343.5",
+      "mae_kg": "1130.9",
+      "wape": "0.177882",
+      "bias": "-0.062437",
+      "observacoes": "84"
+    },
+    {
+      "window_train_end": "2026-09-20",
+      "test_start": "2026-09-21",
+      "test_end": "2026-09-27",
+      "rota_id": "TOTAL",
+      "data": "",
+      "real_kg": "534996.1",
+      "previsao_kg": "511397.3",
+      "erro_kg": "-23598.8",
+      "mae_kg": "1091.1",
+      "wape": "0.171318",
+      "bias": "-0.044110",
+      "observacoes": "84"
+    }
+  ],
+  "incremental_used": false,
+  "intervals_generated": false
+}

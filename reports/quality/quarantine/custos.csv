@@ -1,0 +1,4 @@
+lancamento_id;viagem_id;competencia;componente;valor_brl;registrado_em;_line_number;_rule;_field;_message
+L0000068;T000033;2025-01-03;FRETE_BASE;2846.0;2025-01-03T20:00:00-03:00;69;DUPLICATE_KEY;lancamento_id;Chave duplicada: L0000068
+L0000068;T000033;2025-01-03;FRETE_BASE;2846.0;2025-01-03T20:00:00-03:00;18296;DUPLICATE_KEY;lancamento_id;Chave duplicada: L0000068
+L0000902;T999999;2025-02-03;VARIAVEL_PROPRIO;1484.0;2025-02-03T20:00:00-03:00;903;FOREIGN_KEY;viagem_id;Referencia inexistente em viagens.csv: T999999

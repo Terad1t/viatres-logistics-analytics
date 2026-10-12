@@ -1,0 +1,2 @@
+planilha_id;semana_inicio;rota_digitada;demanda_digitada;unidade;versao;editado_em;responsavel;observacao;_line_number;_rule;_field;_message
+M026;2026-09-28;R02;40.2478;t;1;2026-09-25T16:00:00-03:00;Equipe_G01;"Estimativa manual da demanda total; inclui carteira conhecida";27;INVALID_DOMAIN;unidade;Valor fora do dominio: t

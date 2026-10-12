@@ -1,0 +1,108 @@
+﻿arquivo;campo;tipo_esperado;nulo_permitido;chave_da_tabela;descricao
+galpoes.csv;galpao_id;texto;NAO;galpao_id;"Identificador do galpao; PK no cadastro, FK galpoes nas tabelas diarias"
+galpoes.csv;uf;texto;NAO;galpao_id;Estado: SP, MG ou RJ
+galpoes.csv;cidade;texto;NAO;galpao_id;"Municipio do galpao; rotulos sem acentos no dado"
+galpoes.csv;capacidade_expedicao_kg_dia;inteiro;NAO;galpao_id;"Capacidade nominal de expedicao por dia, kg; nao e estoque"
+galpoes.csv;capacidade_expedicao_m3_dia;inteiro;NAO;galpao_id;Capacidade nominal de expedicao por dia, m3
+galpoes.csv;docas;inteiro;NAO;galpao_id;"Quantidade de docas; informativa, ja refletida na capacidade"
+rotas.csv;rota_id;texto;NAO;rota_id;"Identificador da rota; PK rotas e FK nas demais tabelas"
+rotas.csv;galpao_origem_id;texto;NAO;rota_id;"FK galpoes.galpao_id; origem e retorno do ciclo"
+rotas.csv;uf_destino;texto;NAO;rota_id;UF do destino
+rotas.csv;cidade_destino;texto;NAO;rota_id;"Municipio atendido; rota agregada de distribuicao"
+rotas.csv;km_ciclo;inteiro;NAO;rota_id;"Quilometros totais ida e volta; nao multiplicar por dois"
+rotas.csv;horas_ciclo;decimal;NAO;rota_id;"Horas do ciclo incluindo carga e descarga; simplificacao operacional"
+rotas.csv;sla_dias;inteiro;NAO;rota_id;Dias corridos entre coleta e promessa
+rotas.csv;cap_kg;inteiro;NAO;rota_id;Limite fisico de peso do veiculo/ciclo, kg
+rotas.csv;cap_m3;inteiro;NAO;rota_id;Limite fisico de volume do veiculo/ciclo, m3
+rotas.csv;cap_paletes;inteiro;NAO;rota_id;Limite fisico de posicoes palete por ciclo
+frota.csv;veiculo_id;texto;NAO;veiculo_id;"PK frota ou FK frota; vazio em viagem terceirizada"
+frota.csv;galpao_base_id;texto;NAO;veiculo_id;"FK galpoes; veiculo retorna a esta base"
+frota.csv;tipo;texto;NAO;veiculo_id;Classe TRUCK nesta simulacao
+frota.csv;cap_kg;inteiro;NAO;veiculo_id;Limite fisico de peso do veiculo/ciclo, kg
+frota.csv;cap_m3;inteiro;NAO;veiculo_id;Limite fisico de volume do veiculo/ciclo, m3
+frota.csv;cap_paletes;inteiro;NAO;veiculo_id;Limite fisico de posicoes palete por ciclo
+frota.csv;custo_fixo_dia_brl;inteiro;NAO;veiculo_id;Custo fixo por veiculo por dia corrido, inclusive manutencao e domingo
+frota.csv;custo_variavel_km_brl;decimal;NAO;veiculo_id;Custo por km do proprio, exclui fixos e pedagio
+tarifas.csv;rota_id;texto;NAO;rota_id + vigencia_inicio;"Identificador da rota; PK rotas e FK nas demais tabelas"
+tarifas.csv;vigencia_inicio;data ISO8601;NAO;rota_id + vigencia_inicio;Primeiro dia valido da tarifa, inclusivo
+tarifas.csv;vigencia_fim;data ISO8601;NAO;rota_id + vigencia_inicio;Ultimo dia valido da tarifa, inclusivo
+tarifas.csv;frete_regular_ciclo_brl;decimal;NAO;rota_id + vigencia_inicio;"Preco-base contratado por ciclo completo; exclui pedagio"
+tarifas.csv;adicional_emergencial_pct;decimal;NAO;rota_id + vigencia_inicio;"Fracao adicional sobre frete-base; 0.38 significa 38%"
+tarifas.csv;pedagio_ciclo_brl;decimal;NAO;rota_id + vigencia_inicio;Pedagio por ciclo, proprio ou terceiro
+tarifas.csv;limite_regular_viagens_dia;inteiro;NAO;rota_id + vigencia_inicio;Limite contratado de viagens regulares por rota/dia para planejamento futuro
+tarifas.csv;antecedencia_regular_h;inteiro;NAO;rota_id + vigencia_inicio;Antecedencia minima contratual de reserva em horas
+calendario.csv;data;data ISO8601;NAO;data;"Dia operacional local; parte de chave composta nas tabelas diarias"
+calendario.csv;dia_semana;inteiro;NAO;data;ISO: segunda=1, domingo=7
+calendario.csv;fator_operacao;inteiro;NAO;data;"Fator sintetico de demanda no calendario; nao multiplicar capacidade por este fator"
+calendario.csv;observacao;texto;NAO;data;"Texto contextual; nao compoe chave"
+disponibilidade.csv;data;data ISO8601;NAO;data + veiculo_id;"Dia operacional local; parte de chave composta nas tabelas diarias"
+disponibilidade.csv;veiculo_id;texto;NAO;data + veiculo_id;"PK frota ou FK frota; vazio em viagem terceirizada"
+disponibilidade.csv;status;texto;NAO;data + veiculo_id;"Dominio especifico da tabela; consultar contrato"
+disponibilidade.csv;horas_disponiveis;inteiro;NAO;data + veiculo_id;"Horas uteis do veiculo/data; 0 a 24; ja inclui manutencao"
+disponibilidade.csv;natureza;texto;NAO;data + veiculo_id;"REALIZADO para passado; PLANEJADO para futuro, nunca equivalentes"
+disponibilidade.csv;registrado_em;timestamp ISO8601;NAO;data + veiculo_id;Instante em que a fonte disponibilizou o registro, ISO com offset -03:00
+capacidade.csv;data;data ISO8601;NAO;data + galpao_id;"Dia operacional local; parte de chave composta nas tabelas diarias"
+capacidade.csv;galpao_id;texto;NAO;data + galpao_id;"Identificador do galpao; PK no cadastro, FK galpoes nas tabelas diarias"
+capacidade.csv;cap_kg_dia;inteiro;NAO;data + galpao_id;"Limite efetivo diario kg; substitui nominal, nao se soma a ele"
+capacidade.csv;cap_m3_dia;inteiro;NAO;data + galpao_id;"Limite efetivo diario m3; substitui nominal"
+capacidade.csv;natureza;texto;NAO;data + galpao_id;"REALIZADO para passado; PLANEJADO para futuro, nunca equivalentes"
+capacidade.csv;motivo;texto;NAO;data + galpao_id;"CALENDARIO ou OBRA_DOCAS; obra ja aplicada ao limite"
+capacidade.csv;registrado_em;timestamp ISO8601;NAO;data + galpao_id;Instante em que a fonte disponibilizou o registro, ISO com offset -03:00
+eventos_planejados.csv;evento_id;texto;NAO;evento_id;PK do evento planejado
+eventos_planejados.csv;rota_id;texto;NAO;evento_id;"Identificador da rota; PK rotas e FK nas demais tabelas"
+eventos_planejados.csv;inicio;data ISO8601;NAO;evento_id;Primeiro dia do evento
+eventos_planejados.csv;fim;data ISO8601;NAO;evento_id;Ultimo dia do evento
+eventos_planejados.csv;impacto_demanda_pct;decimal;NAO;evento_id;"Hipotese de variacao relativa de demanda; nao e volume adicional confirmado"
+eventos_planejados.csv;registrado_em;timestamp ISO8601;NAO;evento_id;Instante em que a fonte disponibilizou o registro, ISO com offset -03:00
+eventos_planejados.csv;descricao;texto;NAO;evento_id;Contexto de evento e grau de certeza
+pedidos.csv;pedido_id;texto;NAO;pedido_id + versao;"Identificador comercial; chave de entidade, usar com versao na ingestao"
+pedidos.csv;versao;inteiro;NAO;pedido_id + versao;"Inteiro crescente; selecionar ultima versao disponivel no corte"
+pedidos.csv;criado_em;timestamp ISO8601;NAO;pedido_id + versao;Instante original de criacao na fonte
+pedidos.csv;atualizado_em;timestamp ISO8601;NAO;pedido_id + versao;"Instante de disponibilidade desta versao; filtro as-of"
+pedidos.csv;rota_id;texto;NAO;pedido_id + versao;"Identificador da rota; PK rotas e FK nas demais tabelas"
+pedidos.csv;cliente_id;texto;NAO;pedido_id + versao;Identificador sintetico anonimizado, sem cadastro externo
+pedidos.csv;data_coleta;data ISO8601;NAO;pedido_id + versao;"Dia de demanda/expedicao solicitada; eixo da previsao"
+pedidos.csv;data_prometida;data ISO8601;NAO;pedido_id + versao;Prazo final de entrega em dias corridos, inclusivo
+pedidos.csv;peso_kg;decimal;NAO;pedido_id + versao;Peso solicitado em kg, positivo
+pedidos.csv;volume_m3;decimal;NAO;pedido_id + versao;Volume solicitado em m3, positivo
+pedidos.csv;paletes;inteiro;NAO;pedido_id + versao;Quantidade inteira positiva de paletes solicitados
+pedidos.csv;status;texto;NAO;pedido_id + versao;"Dominio especifico da tabela; consultar contrato"
+viagens.csv;viagem_id;texto;NAO;viagem_id;"PK viagens; FK entregas, custos e viagem_pedidos"
+viagens.csv;rota_id;texto;NAO;viagem_id;"Identificador da rota; PK rotas e FK nas demais tabelas"
+viagens.csv;data_saida;data ISO8601;NAO;viagem_id;"Dia de saida; base para custo operacional e ocupacao"
+viagens.csv;veiculo_id;texto;SIM_CONDICIONAL;viagem_id;"PK frota ou FK frota; vazio em viagem terceirizada"
+viagens.csv;modalidade;texto;NAO;viagem_id;PROPRIO, REGULAR ou EMERGENCIAL
+viagens.csv;cap_kg;inteiro;NAO;viagem_id;Limite fisico de peso do veiculo/ciclo, kg
+viagens.csv;cap_m3;inteiro;NAO;viagem_id;Limite fisico de volume do veiculo/ciclo, m3
+viagens.csv;cap_paletes;inteiro;NAO;viagem_id;Limite fisico de posicoes palete por ciclo
+viagens.csv;km_ciclo;inteiro;NAO;viagem_id;"Quilometros totais ida e volta; nao multiplicar por dois"
+viagens.csv;horas_ciclo;decimal;NAO;viagem_id;"Horas do ciclo incluindo carga e descarga; simplificacao operacional"
+viagem_pedidos.csv;viagem_id;texto;NAO;viagem_id + pedido_id;"PK viagens; FK entregas, custos e viagem_pedidos"
+viagem_pedidos.csv;pedido_id;texto;NAO;viagem_id + pedido_id;"Identificador comercial; chave de entidade, usar com versao na ingestao"
+viagem_pedidos.csv;peso_embarcado_kg;decimal;NAO;viagem_id + pedido_id;"Kg alocados ao pedido/viagem; nao e peso entregue"
+viagem_pedidos.csv;volume_embarcado_m3;decimal;NAO;viagem_id + pedido_id;M3 alocados ao pedido/viagem
+viagem_pedidos.csv;paletes_embarcados;inteiro;NAO;viagem_id + pedido_id;Paletes alocados ao pedido/viagem
+entregas.csv;entrega_id;texto;NAO;entrega_id;"PK do registro de entrega; uma linha por pedido neste recorte"
+entregas.csv;pedido_id;texto;NAO;entrega_id;"Identificador comercial; chave de entidade, usar com versao na ingestao"
+entregas.csv;viagem_id;texto;NAO;entrega_id;"PK viagens; FK entregas, custos e viagem_pedidos"
+entregas.csv;data_entrega;data ISO8601;SIM_CONDICIONAL;entrega_id;"Dia efetivo da entrega; vazio somente em transito"
+entregas.csv;peso_entregue_kg;decimal;SIM_CONDICIONAL;entrega_id;"Kg efetivamente recebidos; vazio em transito, nao equivale a zero"
+entregas.csv;status;texto;NAO;entrega_id;"Dominio especifico da tabela; consultar contrato"
+entregas.csv;registrado_em;timestamp ISO8601;NAO;entrega_id;Instante em que a fonte disponibilizou o registro, ISO com offset -03:00
+custos.csv;lancamento_id;texto;NAO;lancamento_id;"PK de lancamento contabil de custo; duplicata exata e defeito"
+custos.csv;viagem_id;texto;NAO;lancamento_id;"PK viagens; FK entregas, custos e viagem_pedidos"
+custos.csv;competencia;data ISO8601;NAO;lancamento_id;Dia a que se atribui o custo
+custos.csv;componente;texto;NAO;lancamento_id;VARIAVEL_PROPRIO, FRETE_BASE, PEDAGIO ou ADICIONAL_EMERGENCIAL
+custos.csv;valor_brl;decimal;NAO;lancamento_id;"Valor em BRL com 2 casas; neste pacote nao ha estornos validos"
+custos.csv;registrado_em;timestamp ISO8601;NAO;lancamento_id;Instante em que a fonte disponibilizou o registro, ISO com offset -03:00
+previsao_manual.csv;planilha_id;texto;NAO;planilha_id;"PK da linha manual; nao identifica versao comercial por si so"
+previsao_manual.csv;semana_inicio;data ISO8601;NAO;planilha_id;Segunda-feira da semana de demanda prevista
+previsao_manual.csv;rota_digitada;texto;NAO;planilha_id;"Rota livre; resolver alias antes de selecionar versao"
+previsao_manual.csv;demanda_digitada;decimal;NAO;planilha_id;"Estimativa TOTAL semanal, nao demanda residual; unidade na coluna unidade"
+previsao_manual.csv;unidade;texto;NAO;planilha_id;"kg ou t; converter t x 1000"
+previsao_manual.csv;versao;inteiro;NAO;planilha_id;"Inteiro crescente; selecionar ultima versao disponivel no corte"
+previsao_manual.csv;editado_em;timestamp ISO8601;NAO;planilha_id;Instante conhecido da revisao manual
+previsao_manual.csv;responsavel;texto;NAO;planilha_id;Equipe sintetica que alterou a estimativa
+previsao_manual.csv;observacao;texto;NAO;planilha_id;"Texto contextual; nao compoe chave"
+aliases_rotas.csv;alias;texto;NAO;alias;"Texto alternativo autorizado; PK aliases_rotas"
+aliases_rotas.csv;rota_id;texto;NAO;alias;"Identificador da rota; PK rotas e FK nas demais tabelas"

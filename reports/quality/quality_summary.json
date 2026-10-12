@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-10-12T16:13:51.564Z",
+  "source_dir": "outputs\\candidato\\dados\\base",
+  "cutoff": "2026-09-27T23:59:59-03:00",
+  "files": 15,
+  "records": 190741,
+  "findings": 10,
+  "findings_by_rule": {
+    "DUPLICATE_KEY": 4,
+    "NEGATIVE_PHYSICAL_VALUE": 1,
+    "REQUIRED_VALUE": 1,
+    "INVALID_DATE": 1,
+    "INVALID_DOMAIN": 1,
+    "FOREIGN_KEY": 2
+  },
+  "quarantined_files": 2,
+  "raw_files_modified": false
+}

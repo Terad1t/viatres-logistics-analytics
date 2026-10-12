@@ -1,0 +1,27 @@
+﻿controle;valor;unidade;escopo
+linhas_antes_injecao_galpoes;6;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_rotas;12;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_frota;48;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_tarifas;12;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_calendario;642;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_disponibilidade;30816;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_capacidade;3852;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_eventos_planejados;1;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_pedidos;44011;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_viagens;8517;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_viagem_pedidos;42245;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_entregas;42245;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_custos;18294;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_previsao_manual;36;linhas;"Referencia limpa; nao contagem bruta esperada"
+linhas_antes_injecao_aliases_rotas;2;linhas;"Referencia limpa; nao contagem bruta esperada"
+demanda_historica_kg;39108354.8;kg;Confirmados com coleta <= 27/09 na referencia limpa
+demanda_historica_m3;182057.15;m3;Mesmo escopo
+carteira_futura_kg;215269.6;kg;"Coleta > corte, conhecido no corte; nao somar ao total previsto"
+custo_variavel_brl;11827106.9;BRL;Todas viagens historicas da referencia limpa
+custo_fixo_brl;12801600;BRL;Todos veiculos, todos dias corridos 01/01/2025 a 27/09/2026
+coorte_servico;42224;pedidos;"Promessa <= corte; expedidos"
+no_prazo;38250;pedidos;Numerador de pontualidade na referencia limpa
+otif;37310;pedidos;Numerador de OTIF na referencia limpa
+incremental_delta_entidades;1;pedidos;Primeira aplicacao
+incremental_delta_entidades_replay;0;pedidos;Segunda aplicacao do mesmo lote
+incremental_delta_demanda_confirmada_kg;-808.5;kg;"Todas datas de coleta; novo tardio menos cancelamento futuro"

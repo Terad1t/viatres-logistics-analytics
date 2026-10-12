@@ -1,0 +1,23 @@
+kpi;value;unit;numerator;denominator;population;period_start;period_end;coverage;cutoff;notes
+demanda_historica;39104298.6;kg;39104298.6;39104298.6;pedidos confirmados elegiveis por data_coleta;2025-01-01;2026-09-27;6528 agregados diarios;2026-09-27T23:59:59-03:00;Cancelados, duplicados e registros invalidos excluidos.
+demanda_historica;182035.9;m3;182035.9;182035.9;pedidos confirmados elegiveis por data_coleta;2025-01-01;2026-09-27;6528 agregados diarios;2026-09-27T23:59:59-03:00;"Volume solicitado; nao e capacidade de armazenagem."
+demanda_historica;77409.0;paletes;77409.0;77409.0;pedidos confirmados elegiveis por data_coleta;2025-01-01;2026-09-27;6528 agregados diarios;2026-09-27T23:59:59-03:00;Paletes solicitados.
+carteira_confirmada;215269.6;kg;215269.6;215269.6;pedidos confirmados com coleta posterior ao corte;2026-09-28;2026-10-02;56 agregados diarios;2026-09-27T23:59:59-03:00;Nao somar novamente a previsao manual total.
+custo_variavel_operacional;11822664.50;BRL;11822664.50;8517;viagens com custos validos;2025-01-01;2026-09-26;8517/8517 viagens;2026-09-27T23:59:59-03:00;"Custos agregados por viagem; fixos excluidos."
+custo_fixo_comprometido;12781440.00;BRL;12781440.00;634;48 veiculos por dia corrido;2025-01-01;2026-09-26;634 dias;2026-09-27T23:59:59-03:00;Custo fixo nao tratado como economia evitavel.
+custo_total_recorte;24604104.50;BRL;24604104.50;8517;viagens validas mais custo fixo do periodo;2025-01-01;2026-09-26;8517/8517 viagens;2026-09-27T23:59:59-03:00;Variavel + custo fixo comprometido.
+participacao_emergencial;0.147939;fracao;1260;8517;viagens unicas;2025-01-01;2026-09-26;8517 viagens;2026-09-27T23:59:59-03:00;Nao e percentual medio por rota.
+custo_componente_variavel_proprio;6057131.50;BRL;6057131.50;8517;lancamentos agregados por viagem;2025-01-01;2026-09-26;8517 viagens;2026-09-27T23:59:59-03:00;Fonte: custos_por_viagem.
+custo_componente_frete_base;4290370.00;BRL;4290370.00;8517;lancamentos agregados por viagem;2025-01-01;2026-09-26;8517 viagens;2026-09-27T23:59:59-03:00;Fonte: custos_por_viagem.
+custo_componente_adicional_emergencial;957195.30;BRL;957195.30;8517;lancamentos agregados por viagem;2025-01-01;2026-09-26;8517 viagens;2026-09-27T23:59:59-03:00;Fonte: custos_por_viagem.
+custo_componente_pedagio;517967.70;BRL;517967.70;8517;lancamentos agregados por viagem;2025-01-01;2026-09-26;8517 viagens;2026-09-27T23:59:59-03:00;Fonte: custos_por_viagem.
+ocupacao_kg;0.573975;fracao;39108354.8;68136000.0;viagens com carga e capacidade validas;2025-01-01;2026-09-26;8517 viagens;2026-09-27T23:59:59-03:00;"Razao entre somas; nao media simples de percentuais."
+ocupacao_m3;0.475016;fracao;182057.1;383265.0;viagens com carga e capacidade validas;2025-01-01;2026-09-26;8517 viagens;2026-09-27T23:59:59-03:00;"Razao entre somas; nao media simples de percentuais."
+ocupacao_paletes;0.649273;fracao;77418.0;119238.0;viagens com carga e capacidade validas;2025-01-01;2026-09-26;8517 viagens;2026-09-27T23:59:59-03:00;"Razao entre somas; nao media simples de percentuais."
+custo_por_kg_expedido;0.30;BRL/kg;11822664.50;39108354.8;viagens com custo e carga validos;2025-01-01;2026-09-26;8517 viagens;2026-09-27T23:59:59-03:00;Custo variavel dividido pelo peso embarcado do mesmo escopo.
+adicional_emergencial_por_kg;0.02;BRL/kg;957195.30;39108354.8;viagens com custo e carga validos;2025-01-01;2026-09-26;8517 viagens;2026-09-27T23:59:59-03:00;Nao inclui custos fixos.
+utilizacao_frota;0.261850;fracao;6386;24388;veiculos-dia comprovadamente disponiveis;2025-01-01;2026-09-27;24388/30815 linhas de disponibilidade;2026-09-27T23:59:59-03:00;Ausencias nao foram tratadas como disponibilidade.
+ociosidade_disponivel;0.738150;fracao;18002;24388;veiculos-dia comprovadamente disponiveis sem viagem;2025-01-01;2026-09-27;24388/30815 linhas de disponibilidade;2026-09-27T23:59:59-03:00;Nao e economia automaticamente evitavel.
+entrega_no_prazo;0.905895;fracao;38246;42219;pedidos expedidos com promessa ate o corte;2025-01-01;2026-09-27;42219/42219;2026-09-27T23:59:59-03:00;Pendente vencido conta como falha.
+otif;0.883631;fracao;37306;42219;pedidos expedidos com promessa ate o corte;2025-01-01;2026-09-27;42219/42219;2026-09-27T23:59:59-03:00;Peso integral com tolerancia de 0.1 kg.
+backlog_vencido;6;pedidos;6;42219;pedidos com promessa ate o corte sem entrega encerrada;2025-01-01;2026-09-27;42219/42219;2026-09-27T23:59:59-03:00;PARCIAL e encerrada neste case.

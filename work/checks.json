@@ -1,0 +1,36 @@
+{
+  "status": "APROVADO",
+  "seed": 27102026,
+  "versao": "1.0",
+  "pedidos_base_bruta": 44012,
+  "pedidos_historicos_confirmados": 42245,
+  "viagens": 8517,
+  "ocorrencias_manifesto": 17,
+  "campos_documentados": 107,
+  "tabelas_base": 15,
+  "periodo_historico": [
+    "2025-01-01",
+    "2026-09-27"
+  ],
+  "horizonte": [
+    "2026-09-28",
+    "2026-10-04"
+  ],
+  "testes": [
+    "FKs na referencia canonica",
+    "demanda historica = carga embarcada",
+    "uma alocacao por pedido historico confirmado",
+    "carga por viagem dentro de kg/m3/paletes",
+    "veiculo proprio nao duplicado por dia",
+    "horas de ciclo dentro da disponibilidade",
+    "nenhuma entrega realizada apos corte",
+    "pedidos-base conhecidos no corte",
+    "custos com viagem existente antes das falhas",
+    "dicionario cobre todos os campos"
+  ],
+  "limites": [
+    "Anomalias brutas sao intencionais",
+    "XLSX e copia parcial de fontes; historico completo em CSV",
+    "Nao ha teste de sistema candidato ou integracao real"
+  ]
+}

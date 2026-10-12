@@ -1,0 +1,16 @@
+file;bytes;records;columns;header
+aliases_rotas.csv;38;2;2;alias|rota_id
+calendario.csv;48472;642;4;data|dia_semana|fator_operacao|observacao
+capacidade.csv;278878;3852;7;data|galpao_id|cap_kg_dia|cap_m3_dia|natureza|motivo|registrado_em
+custos.csv;1342477;18295;6;lancamento_id|viagem_id|competencia|componente|valor_brl|registrado_em
+disponibilidade.csv;2045248;30815;6;data|veiculo_id|status|horas_disponiveis|natureza|registrado_em
+entregas.csv;3354695;42245;7;entrega_id|pedido_id|viagem_id|data_entrega|peso_entregue_kg|status|registrado_em
+eventos_planejados.csv;217;1;7;evento_id|rota_id|inicio|fim|impacto_demanda_pct|registrado_em|descricao
+frota.csv;1830;48;8;veiculo_id|galpao_base_id|tipo|cap_kg|cap_m3|cap_paletes|custo_fixo_dia_brl|custo_variavel_km_brl
+galpoes.csv;275;6;6;galpao_id|uf|cidade|capacidade_expedicao_kg_dia|capacidade_expedicao_m3_dia|docas
+pedidos.csv;5251878;44012;12;pedido_id|versao|criado_em|atualizado_em|rota_id|cliente_id|data_coleta|data_prometida|peso_kg|volume_m3|paletes|status
+previsao_manual.csv;5095;37;9;planilha_id|semana_inicio|rota_digitada|demanda_digitada|unidade|versao|editado_em|responsavel|observacao
+rotas.csv;660;12;10;rota_id|galpao_origem_id|uf_destino|cidade_destino|km_ciclo|horas_ciclo|sla_dias|cap_kg|cap_m3|cap_paletes
+tarifas.csv;747;12;8;rota_id|vigencia_inicio|vigencia_fim|frete_regular_ciclo_brl|adicional_emergencial_pct|pedagio_ciclo_brl|limite_regular_viagens_dia|antecedencia_regular_h
+viagem_pedidos.csv;1324904;42245;5;viagem_id|pedido_id|peso_embarcado_kg|volume_embarcado_m3|paletes_embarcados
+viagens.csv;478215;8517;10;viagem_id|rota_id|data_saida|veiculo_id|modalidade|cap_kg|cap_m3|cap_paletes|km_ciclo|horas_ciclo
